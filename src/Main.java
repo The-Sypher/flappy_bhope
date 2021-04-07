@@ -1,4 +1,4 @@
-import Flappy_Bird.Flappy_Bird;
+import pack.Flappy_Bird;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Flappy_Bird;
+package pack;
 
 import java.awt.Graphics;
 import java.io.Serial;

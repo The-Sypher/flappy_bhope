@@ -47,7 +47,7 @@ public class Flappy_Bird implements ActionListener, MouseListener, KeyListener
         ap = ap.substring(0, ap.length() - 6);
     }
 
-    public void play_tading()
+    public void play_woosh()
     {
         String soundName = ap+"assets\\sounds\\tading.wav";
         try {
@@ -65,7 +65,7 @@ public class Flappy_Bird implements ActionListener, MouseListener, KeyListener
         }
 
     }
-    public void play_woosh()
+    public void play_tading()
     {
         String soundName = ap+"assets\\sounds\\woosh.wav";
         try {

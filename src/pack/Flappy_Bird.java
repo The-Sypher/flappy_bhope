@@ -65,6 +65,25 @@ public class Flappy_Bird implements ActionListener, MouseListener, KeyListener
         }
 
     }
+    public void play_woosh()
+    {
+        String soundName = ap+"assets\\sounds\\woosh.wav";
+        try {
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+        }
+
+        catch (IOException e){e.printStackTrace();}
+        catch (UnsupportedAudioFileException e) {
+            e.printStackTrace();
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public Flappy_Bird()
     {
         setAP();
@@ -244,6 +263,7 @@ public class Flappy_Bird implements ActionListener, MouseListener, KeyListener
                 //check if bird is in middle of columns
                 {
                     score++;
+                    play_woosh();
 
                 }
                 if (column.intersects(bird))//check if bird has collided with columns

@@ -15,7 +15,7 @@ import java.util.Random;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
-import java.io.File;
+
 
 public class Flappy_Bird implements ActionListener, MouseListener, KeyListener
 {
@@ -127,7 +127,7 @@ public class Flappy_Bird implements ActionListener, MouseListener, KeyListener
         frame.setVisible(true);
         frame.setResizable(false);
 
-        bird = new Rectangle(WIDTH / 2 - 10, HEIGHT / 2 - 10, 38, 26);
+        bird = new Rectangle(WIDTH / 2 - 10, HEIGHT / 2 - 10, 20, 20);
 
         columns = new ArrayList<>();
 

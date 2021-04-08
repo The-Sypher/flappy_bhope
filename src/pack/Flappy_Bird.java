@@ -83,6 +83,24 @@ public class Flappy_Bird implements ActionListener, MouseListener, KeyListener
         }
 
     }
+    public void play_wii()
+    {
+        String soundName = ap+"assets\\sounds\\wii.wav";
+        try {
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+        }
+
+        catch (IOException e){e.printStackTrace();}
+        catch (UnsupportedAudioFileException e) {
+            e.printStackTrace();
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     public Flappy_Bird()
     {
@@ -109,7 +127,7 @@ public class Flappy_Bird implements ActionListener, MouseListener, KeyListener
         frame.setVisible(true);
         frame.setResizable(false);
 
-        bird = new Rectangle(WIDTH / 2 - 10, HEIGHT / 2 - 10, 20, 20);
+        bird = new Rectangle(WIDTH / 2 - 10, HEIGHT / 2 - 10, 38, 26);
 
         columns = new ArrayList<>();
 
@@ -166,6 +184,7 @@ public class Flappy_Bird implements ActionListener, MouseListener, KeyListener
         }
         if (!started)
         {
+            play_wii();
             started = true;
         } else if (!gameOver)
         {
